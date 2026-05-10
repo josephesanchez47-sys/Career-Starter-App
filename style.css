@@ -1,0 +1,56 @@
+/* 1. Black Background & Mobile Centering */
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Keeps it at the top for easier scrolling */
+    background-color: #000000; /* pure black */
+    margin: 0;
+    padding: 10px; /* Small padding so it doesn't touch the phone edges */
+    min-height: 100vh;
+}
+
+/* 2. Responsive Card - This fixes the side-scrolling */
+#app-container {
+    background: white;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(255,255,255,0.1);
+    
+    width: 100%; /* Uses full width of the phone */
+    max-width: 400px; /* But won't get too huge on a computer */
+    box-sizing: border-box; /* Crucial: includes padding in the width calculation */
+    
+    text-align: center;
+}
+
+/* 3. Make sure images and videos don't "break" the box */
+img, iframe {
+    max-width: 100%;
+    height: auto;
+}
+
+/* The Buttons */
+button { 
+    background: #007bff; 
+    color: white; 
+    border: none; 
+    padding: 12px 24px; 
+    border-radius: 8px; 
+    cursor: pointer; 
+    margin: 10px 5px; 
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+button:hover { 
+    background: #0056b3; 
+}
+
+/* Progress bar text */
+#progress {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #666;
+}
